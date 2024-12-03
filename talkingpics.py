@@ -16,7 +16,7 @@ SAVE_PATH = Path('/home/angela/Downloads/devine/TalkingPics/')
 try:
     SAVE_PATH.mkdir(exist_ok=True, parents=True)
 except Exception as e:
-    print(f"Error creating save directory. Have you set up your save folder from Config in the menu? \n {e}")
+    print(f"Error creating save directory. \n {e}")
 
 def prettify(my_list):
     """
