@@ -4,9 +4,19 @@ from rich.console import Console
 from beaupy import select, select_multiple
 import subprocess
 import sys
-
+from pathlib import Path
 console = Console()
 global client
+
+######################################################################
+###  edit this path ####
+SAVE_PATH = Path('/home/angela/Downloads/devine/TalkingPics/')
+
+
+try:
+    SAVE_PATH.mkdir(exist_ok=True, parents=True)
+except Exception as e:
+    print(f"Error creating save directory. Have you set up your save folder from Config in the menu? \n {e}")
 
 def prettify(my_list):
     """
@@ -205,7 +215,7 @@ def download(selected):
                 '--save-name',
                 name,
                 '--save-dir',
-                '/home/angela/Downloads/devine/TalkingPics',
+                SAVE_PATH,
                 '-mt',
                 '-M',
                 'format=mkv:muxer=mkvmerge',
