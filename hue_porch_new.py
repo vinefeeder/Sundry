@@ -1,6 +1,11 @@
 # A routine to control a group or groups of Philips Hue lamps
 # uses Hue API version 1 
 
+# This is for a Hue Porch Light and a Hue sensor. Lights transition their colour from an appointed time in relation to sunset.
+The transition interval may be set by the user
+The fineness of the clour step-change may be controlled by the user by setting ITEMS
+TRANSITION TIME is in millseconds and is how long the Hue lamp takes to change colour. It avoid jarring jumps.
+
 # The transition is along an imaginary circle's edge with radius and centre specified to fall
 # within the Philips Gamut C triangle on their Chromacity diagram.
 
