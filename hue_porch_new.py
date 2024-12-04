@@ -24,6 +24,8 @@
 # Green: 0.17, 0.7
 # Blue: 0.1532, 0.0475
 
+# I have this running on a Raspberry Pi Zero; it does nothing else but control the porch light.
+
 
 
 
