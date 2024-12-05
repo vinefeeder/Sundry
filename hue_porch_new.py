@@ -1,11 +1,6 @@
 # A routine to control a group or groups of Philips Hue lamps
 # uses Hue API version 1 
 
-# This is for a Hue Porch Light and a Hue sensor. Lights transition their colour from an appointed time in relation to sunset.
-# The transition interval may be set by the user
-# The fineness of the clour step-change may be controlled by the user by setting ITEMS
-# TRANSITION TIME is in millseconds and is how long the Hue lamp takes to change colour. It avoid jarring jumps.
-
 # The transition is along an imaginary circle's edge with radius and centre specified to fall
 # within the Philips Gamut C triangle on their Chromacity diagram.
 
@@ -23,8 +18,6 @@
 # Red: 0.6915, 0.3038
 # Green: 0.17, 0.7
 # Blue: 0.1532, 0.0475
-
-# I have this running on a Raspberry Pi Zero; it does nothing else but control the porch light.
 
 
 
@@ -82,21 +75,21 @@ def sensor_thread():
             myjson = response.json()
             if myjson["state"]["presence"]:
                 print(f"Motion detected at {datetime.now()}, pausing color changes.")
-                SENSORACTIVATED = True
+                
                 pause_event.set()  # Signal the main thread to pause
                 with bri_lock:
                     bri = 254
                 # Send brightness update to the bulb
                 myjson = {'bri': bri, 'xy': [0.3,0.35]}  
                 client.put(action1, json=myjson)
+                
                 time.sleep(SENSORTIMEOUT)  # Wait for motion timeout
-
-                print(f"Resuming color changes at {datetime.now()}.")
-                SENSORACTIVATED = False
+                
+                print(f"Resuming color changes at {datetime.now()} in sensor thread.")
+                
                 with bri_lock:
                     bri = NORMAL_BRIGHTNESS
                 pause_event.clear()  # Signal the main thread to resume
-                #main_thread()
         except Exception as e:
             print(f"Sensor thread error: {e}")
         time.sleep(1)  # Polling interval for the motion sensor
@@ -105,7 +98,6 @@ def main_thread():
     """Calculate and send color updates to the Hue bulb."""
     global bri
     print(f"Script started at {datetime.now()}")
-
     # Turn lights on
     myjson = {"on": True, "bri": NORMAL_BRIGHTNESS}
     try:
@@ -115,52 +107,49 @@ def main_thread():
 
     i = 1
     while True:
-        if not SENSORACTIVATED:
-            # Check stop condition
-            if is_time_to_stop():
-                print(f"Stopping script at {datetime.now()}")
-                myjson = {"on": False}
-                try:
-                    client.put(action1, json=myjson)
-                except Exception as e:
-                    print(f"Error turning off lights: {e}")
-                stop_event.set()
-                return
-
-            # Wait if motion is detected
-            if pause_event.is_set():
-                print("Main thread paused due to motion detection.")
-
-                while pause_event.is_set():
-                    pause_event.wait()
-
-                print(f"Resuming color changes at {datetime.now()}.")
-
-            # Generate x, y values for the current step on the circle
-            x = round(0.33 + r * math.cos(2 * math.pi * i / ITEMS), 4)
-            y = round(0.37 + r * math.sin(2 * math.pi * i / ITEMS), 4)
-
-            # Send light update
-            with bri_lock:
-                myjson = {"bri": bri, "xy": [x, y], "transitiontime": TRANSITIONTIME}
+        # Check stop condition
+        if is_time_to_stop():
+            print(f"Stopping script at {datetime.now()}")
+            myjson = {"on": False}
             try:
-                response = client.put(action1, json=myjson)
-                if response.status_code != 200:
-                    print(f"Command failed: {response.status_code}")
+                client.put(action1, json=myjson)
             except Exception as e:
-                print(f"Error updating lights: {e}")
+                print(f"Error turning off lights: {e}")
+            stop_event.set()
+            return
 
-            time.sleep(TIMEINTERVAL)  # Delay before the next color change
+        # Wait if motion is detected
+        if pause_event.is_set():
+            print("Main thread paused due to motion detection.")
 
-            i += 1  # Increment index
-            if i >= ITEMS:
-                i = 1  # Reset index
+            while pause_event.is_set():
+                pause_event.wait(2)
+
+            print(f"Resuming color changes at {datetime.now()} in main thread.")
+
+        # Generate x, y values for the current step on the circle
+        x = round(0.33 + r * math.cos(2 * math.pi * i / ITEMS), 4)
+        y = round(0.37 + r * math.sin(2 * math.pi * i / ITEMS), 4)
+
+        # Send light update
+        with bri_lock:
+            myjson = {"bri": bri, "xy": [x, y], "transitiontime": TRANSITIONTIME}
+        try:
+            response = client.put(action1, json=myjson)
+            if response.status_code != 200:
+                print(f"Command failed: {response.status_code}")
+        except Exception as e:
+            print(f"Error updating lights: {e}")
+
+        time.sleep(TIMEINTERVAL)  # Delay before the next color change
+
+        i += 1  # Increment index
+        if i >= ITEMS:
+            i = 1  # Reset index
 # Start threads
 def main():
     global client
     client = Client(timeout=100)
-    global SENSORACTIVATED 
-    SENSORACTIVATED = False
 
     # Create threads
     sensor = threading.Thread(target=sensor_thread, daemon=True)
