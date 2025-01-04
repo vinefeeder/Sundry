@@ -1,0 +1,54 @@
+profile_short_name:KL Explorer
+profile_designer:Kaffelogic Ltd
+profile_description:Kaffelogic Explorer Profile:\v\vThis is the new default profile for the Kaffelogic System. This is a good starting point for your first roast as it takes notes from its predecessor, but with new updates. \vThis profile is used for all manors of roasting, whether you drink espresso, filter or for cupping coffees. It provides a simple starting point for you to adjust and dial in until you have the perfect roast.\v\vRecommended Levels:\v\vCupping: Level 0.8-1.0 / +5°C - 7°C increase post first crack (~12-17% development).\v\vFilter: Level 0.8-1.2 / +5°C - +9°C increase post first crack (~12-19% development).\v\vEspresso: Level 1.1-2.8+/ +8°C - +15.5°C increase post first crack (~18-34% development).\v\v*These are suggestions and your preferred taste may vary outside of these ranges. For lighter roasted coffee move to the lower end of the range, for darker move to the higher end.
+profile_schema_version:1.4
+emulation_mode:0.0
+recommended_level:2.8
+expect_fc:209.0
+expect_colrchange:0.0
+preheat_power:950
+preheat_nominal_temperature:240.0
+preheat_min_power_offset:10
+preheat_min_time:20.0
+preheat_max_time:60.0
+preheat_check_gradient_time:30.0
+preheat_target_in_future:30.0
+preheat_mode:5
+preheat_end_detection_count:5
+preheat_temperature_proximity:8.5
+roast_required_power:1200
+roast_min_desired_rate_of_rise:1.3
+roast_target_in_future:25.0
+roast_use_prediction_method:1
+roast_target_timeshift:1.0
+roast_end_by_time_ratio:0.33333
+roast_PID_Kp:0.7172
+roast_PID_Ki:0
+roast_PID_Kd:3.55
+roast_PID_min_i:0
+roast_PID_max_i:0
+roast_PID_iLimitApplyAtZero:1
+roast_PID_differentialOnError:1
+specific_heat_adj_upper_temperature_limit:180
+specific_heat_adj_lower_temperature_limit:80
+specific_heat_adj_multiplier_Kp:2.1
+specific_heat_adj_multiplier_Kd:4
+zone1_time_start:0.0
+zone1_time_end:0.0
+zone1_multiplier_Kp:1
+zone1_multiplier_Kd:1
+zone1_boost:0.0
+zone2_time_start:0.0
+zone2_time_end:0.0
+zone2_multiplier_Kp:1
+zone2_multiplier_Kd:1
+zone2_boost:0.0
+corner1_time_start:0.0
+corner1_time_end:0.0
+cooldown_hi_speed:16500
+cooldown_lo_speed:16000
+cooldown_lo_temperature:100.0
+roast_levels:205.8,216.5,222.0,224.5,226.5,228.5,230.5
+profile_modified:24/07/2024 22:27:41 UTC
+roast_profile:0.0,20.0,0,0.0,18.0462611784,47.3,67.3225111213,106.0,42.5643288447,84.5,96.7047902747,131.5,179.692320759,170.6,143.504537551,156.4,218.686031927,185.9,315.759165083,202.1,274.326440642,195.9,436.338833763,220.3,721.186383736,231.1,599.335876974,226.4,0,0.0
+fan_profile:0.0,14700.0,0,0.0,20.470168809,14700.1056865,68.2339001951,14700.2593553,39.6332465168,14705.7730895,158.543246445,14682.8492034,331.706753555,14003.705076,245.672985782,14529.8258614,395.0571203,13616.2996934,540.0,13200.0,465.750152646,13189.7119551,564.6007109,13203.4086699,600.0,13200.0,576.475466964,13199.7035939,0,0.0

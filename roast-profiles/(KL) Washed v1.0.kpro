@@ -1,0 +1,54 @@
+profile_short_name:KL Washed
+profile_designer:Kaffelogic Ltd
+profile_description:The Kaffelogic Washed Profile:\v\vThis profile is aimed to be a starting point for Washed Processed coffees.  \v\vRecommended Levels:\v\vCupping: Level 0.8-1.0 / +5°C - 7°C increase post first crack (~11-15% development).\v\vFilter: Level 0.8-1.2 / +5°C - +8°C increase post first crack (~10-18% development).\v\vEspresso: Level 1.0+/ +7°C - +15°C increase post first crack (~15-32% development).\v\v*These are suggestions and your preferred taste may vary outside of these ranges. For lighter roasted coffee move to the lower end of the range, for darker move to the higher end.
+profile_schema_version:1.4
+emulation_mode:0.0
+recommended_level:1.0
+expect_fc:209.0
+expect_colrchange:0.0
+preheat_power:780
+preheat_nominal_temperature:240.0
+preheat_min_power_offset:10
+preheat_min_time:20.0
+preheat_max_time:60.0
+preheat_check_gradient_time:30.0
+preheat_target_in_future:15.0
+preheat_mode:5
+preheat_end_detection_count:5
+preheat_temperature_proximity:8.5
+roast_required_power:1200
+roast_min_desired_rate_of_rise:0.9
+roast_target_in_future:25.0
+roast_use_prediction_method:1
+roast_target_timeshift:1.0
+roast_end_by_time_ratio:0.33333
+roast_PID_Kp:0.7172
+roast_PID_Ki:0
+roast_PID_Kd:3.55
+roast_PID_min_i:0
+roast_PID_max_i:0
+roast_PID_iLimitApplyAtZero:1
+roast_PID_differentialOnError:1
+specific_heat_adj_upper_temperature_limit:180
+specific_heat_adj_lower_temperature_limit:80
+specific_heat_adj_multiplier_Kp:2.1
+specific_heat_adj_multiplier_Kd:4
+zone1_time_start:0.0
+zone1_time_end:0.0
+zone1_multiplier_Kp:1
+zone1_multiplier_Kd:1
+zone1_boost:4.0
+zone2_time_start:0.0
+zone2_time_end:0.0
+zone2_multiplier_Kp:1
+zone2_multiplier_Kd:1
+zone2_boost:4.0
+corner1_time_start:0.0
+corner1_time_end:0.0
+cooldown_hi_speed:16800
+cooldown_lo_speed:15500
+cooldown_lo_temperature:100.0
+roast_levels:205.8,216.5,222.0,224.5,226.5,228.5,230.5
+profile_modified:24/07/2024 22:29:09 UTC
+roast_profile:2.5,28.2,0,0.0,26.6441850322,57.8,90.3769968525,120.4,59.402559521,98.0,122.51241056,143.6,209.433670538,177.8,172.004339406,164.7,244.504001857,190.0,330.3954861,205.1,293.795466992,198.8,370.703207524,212.1,465.882,220.5,425.123937172,217.0,495.311189498,223.0,564.174257527,226.2,534.670210382,224.8,601.812822566,228.0,689.6918429,230.8,652.030683695,229.6,0,0.0
+fan_profile:0.0,14700.0,0,0.0,18.0,14700.0,59.9428017507,14701.6623922,50.4560017507,14701.6623922,69.4296017507,14701.6623922,356.197,14124.8,265.344657735,14655.3908778,448.11966754,13587.9582671,600.0,13200.0,582.003,13200.0,0,0.0

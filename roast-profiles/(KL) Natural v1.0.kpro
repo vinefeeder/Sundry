@@ -1,0 +1,54 @@
+profile_short_name:KL Natural
+profile_designer:Kaffelogic Ltd
+profile_description:The Kaffelogic Natural Profile:\v\vThis profile is aimed to be a starting point for Natural Processed coffees.  \v\vRecommended Levels:\v\vCupping: Level 0.8-1.0 / +5°C - 7°C increase post first crack (~10-14% development).\v\vFilter: Level 0.8-1.3 / +5°C - +9°C increase post first crack (~10-17% development).\v\vEspresso: Level 1.2+/ +8.5°C - +15.5°C increase post first crack (~16-30% development).\v\v*These are suggestions and your preferred taste may vary outside of these ranges. For lighter roasted coffee move to the lower end of the range, for darker move to the higher end.
+profile_schema_version:1.4
+emulation_mode:0.0
+recommended_level:1.2
+expect_fc:212.8
+expect_colrchange:0.0
+preheat_power:960
+preheat_nominal_temperature:240.0
+preheat_min_power_offset:10
+preheat_min_time:20.0
+preheat_max_time:50.0
+preheat_check_gradient_time:30.0
+preheat_target_in_future:15.0
+preheat_mode:5
+preheat_end_detection_count:5
+preheat_temperature_proximity:8.5
+roast_required_power:1200
+roast_min_desired_rate_of_rise:0.1
+roast_target_in_future:25.0
+roast_use_prediction_method:1
+roast_target_timeshift:1.0
+roast_end_by_time_ratio:0.33333
+roast_PID_Kp:0.7172
+roast_PID_Ki:0
+roast_PID_Kd:3.55
+roast_PID_min_i:0
+roast_PID_max_i:0
+roast_PID_iLimitApplyAtZero:1
+roast_PID_differentialOnError:1
+specific_heat_adj_upper_temperature_limit:180
+specific_heat_adj_lower_temperature_limit:80
+specific_heat_adj_multiplier_Kp:2.1
+specific_heat_adj_multiplier_Kd:4
+zone1_time_start:0.0
+zone1_time_end:0.0
+zone1_multiplier_Kp:1
+zone1_multiplier_Kd:1
+zone1_boost:4.0
+zone2_time_start:0.0
+zone2_time_end:0.0
+zone2_multiplier_Kp:1
+zone2_multiplier_Kd:1
+zone2_boost:4.0
+corner1_time_start:0.0
+corner1_time_end:0.0
+cooldown_hi_speed:16500
+cooldown_lo_speed:15500
+cooldown_lo_temperature:100.0
+roast_levels:205.8,216.5,222.0,224.5,226.5,228.5,230.5
+profile_modified:24/07/2024 22:28:24 UTC
+roast_profile:2.5,25.0,0,0.0,18.5391889545,53.3,66.419827156,112.7,40.786288366,92.6,118.28769952,153.3,269.716948901,195.7,205.78414127,179.8,376.189084451,222.2,633.607618914,232.0,523.97891779,227.8,0,0.0
+fan_profile:0.0,14700.0,0,0.0,18.0,14700.0,52.7944,14703.1,43.3076156027,14702.9279423,100.456753555,14703.9644313,359.776958461,14166.7284179,268.924616196,14657.3192957,453.444076371,13660.9381163,600.0,13200.0,582.003,13200.0,0,0.0
