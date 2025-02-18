@@ -1,3 +1,4 @@
+# A downloader for media from https://tptvencore.co.uk/
 from httpx import Client
 import json
 from rich.console import Console
@@ -175,7 +176,7 @@ def download(selected):
 
     Notes:
     The video is downloaded in MKV format using the N_m3u8DL-RE command line tool.
-    The video is saved to the /home/angela/Downloads/devine/ directory.
+    The video is saved to the SAVEPATH (set above) directory.
     """
     brcove_headers = {
         'Accept': '*/*',
