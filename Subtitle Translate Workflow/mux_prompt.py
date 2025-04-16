@@ -1,4 +1,4 @@
-import os
+n.import os
 import re
 import subprocess
 
@@ -24,7 +24,7 @@ def main():
     folder = prompt("Enter path to folder with video and SRT files", ".")
     prefix = prompt("Enter video filename prefix before episode number (e.g., Astrid_et_Raphaelle_S5_E)")
     episode_input = prompt("Enter episode numbers (e.g. 1-8 or 1,3,5)")
-    srt_pattern = prompt("Enter subtitle pattern (use ## for episode, e.g., S05E##.srt)")
+    srt_pattern = prompt("Enter subtitle pattern (use ## for episode, e.g., S05E##.en.srt)")
     output_suffix = prompt("Enter suffix to add to output files (e.g., _en.mkv)", "_en.mkv")
 
     episodes = parse_episode_range(episode_input)
