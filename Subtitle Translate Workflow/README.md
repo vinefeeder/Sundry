@@ -8,4 +8,4 @@ Save each file as S0nE0n.lang.srt for example S05E07.en.srt
 
 Place the newly translated srt files back into the video folder. Remove the old srt files
 
-Run the python file mux_prompt to batch mux the existing video with a new susbtitle track
+Run the python file mux_prompt to batch mux the existing videos with its new subtitle track
