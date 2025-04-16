@@ -12,4 +12,4 @@ Run the python file mux_prompt to batch mux the existing videos with its new sub
 
 **qsm files**
 
-If you have subtitle files in qsm.mp4 format (from yt-dlp) use the converter to batch change them to srt format before language translation
+If you have subtitle files in qsm.mp4 format (from yt-dlp) use the converter process2_srt.sh to batch change them to srt format before language translation
