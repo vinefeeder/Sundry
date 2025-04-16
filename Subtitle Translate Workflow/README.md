@@ -11,4 +11,5 @@ Place the newly translated srt files back into the video folder. Remove the old 
 Run the python file mux_prompt to batch mux the existing videos with its new subtitle track
 
 **qsm files**
-If you have subtitle files in qsm format use the converter to change to srt
+
+If you have subtitle files in qsm.mp4 format (from yt-dlp) use the converter to batch change them to srt format before language translation
