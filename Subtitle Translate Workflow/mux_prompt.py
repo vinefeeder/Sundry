@@ -1,4 +1,4 @@
-n.import os
+import os
 import re
 import subprocess
 
