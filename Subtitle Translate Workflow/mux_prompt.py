@@ -16,11 +16,11 @@ def extract_season_episode(filename):
     return None, None
 
 def main():
-    print("🎬 Subtitle Muxer (Refactored for variable video names)")
+    print("🎬 Subtitle Muxer")
 
     folder = prompt("Enter path to folder with video and SRT files", ".")
-    subtitle_pattern = prompt("Enter subtitle pattern (use ## for episode, e.g., S##E##.en.srt)", "S##E##.en.srt")
-    output_suffix = prompt("Enter suffix to add to output files", "_en.mkv")
+    subtitle_pattern = prompt("Enter subtitle pattern (use ## for episode, e.g., S02E##.en.srt)")
+    output_suffix = prompt("Enter suffix to add to output files", "_en_subs.mkv")
 
     files = [f for f in os.listdir(folder) if f.endswith(".mkv")]
 
