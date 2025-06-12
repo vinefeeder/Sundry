@@ -169,6 +169,7 @@ class ITV:
         out_path = Path(f"{SAVE_PATH}/ITV/{folder}")
         out_path.mkdir(exist_ok=True, parents=True)
         videoname = f"{index}.{videoname}" if isinstance(index, int) else videoname
+        videoname = videoname.replace('_SNoneENone', '')
 
         command = [
             "N_m3u8DL-RE", mpd_url, "--append-url-params", "--auto-select",
