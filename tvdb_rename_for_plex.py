@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
 '''
-A script to rename files according to thetvdb.com listings
-series_id is found on a series page eg
+A script to rename Plex Server files according to thetvdb.com listings
+series_id is found on a series page e.g.
 https://www.thetvdb.com/series/maigret
 TheTVDB.com Series ID 77819 
 
@@ -13,7 +13,7 @@ python rename_tv_for_plex.py ./Maigret1960s \
   --dry-run \
   --min-score 60
 
-remove --dry-run and adjust --min-score (match accuracy) to actively run)
+remove --dry-run and adjust --min-score (match accuracy) to actively make changes.
 
 Note you need a free API key from https://www.thetvdb.com
 '''
