@@ -17,10 +17,10 @@ remove --dry-run and adjust --min-score (match accuracy) to actively make change
 
 Note you need a free API key from https://www.thetvdb.com
 '''
+
 import os
 import re
 import argparse
-import unicodedata
 from tvdb_v4_official import TVDB
 from fuzzywuzzy import process
 
@@ -74,14 +74,27 @@ def rename_files_in_folder(folder_path, episode_map, dry_run=False, min_score=70
         base, ext = os.path.splitext(f)
         norm_base = normalize_name(base)
 
+        # Try to extract SxxExx from filename
+        code_match = re.search(r's(\d{2})e(\d{2})', base, re.IGNORECASE)
+        forced_code = f"S{code_match.group(1)}E{code_match.group(2)}" if code_match else None
+
         match_code, match_title, match_score = None, None, 0
-        for code, title in episode_map.items():
-            if code in used:
-                continue
+
+        # If code is found, try to match just that episode
+        if forced_code and forced_code in episode_map and forced_code not in used:
+            title = episode_map[forced_code]
             norm_title = normalize_name(title)
             score = process.extractOne(norm_base, [norm_title])[1]
-            if score > match_score:
-                match_code, match_title, match_score = code, title, score
+            match_code, match_title, match_score = forced_code, title, score
+        else:
+            # fallback: full fuzzy scan (original logic)
+            for code, title in episode_map.items():
+                if code in used:
+                    continue
+                norm_title = normalize_name(title)
+                score = process.extractOne(norm_base, [norm_title])[1]
+                if score > match_score:
+                    match_code, match_title, match_score = code, title, score
 
         if match_score < min_score or match_code is None:
             print(f"⚠️  Skipping '{f}' — low match ({match_score})")
@@ -128,3 +141,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
