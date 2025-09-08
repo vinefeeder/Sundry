@@ -12,6 +12,21 @@
 # This routine uses a proximity sensor to brighten the light if persons or animals are detected in range
 
 # it is designd to be run by cron at sunset.  crontab and sunwait are required
+
+# wget https://github.com/risacher/sunwait/archive/refs/tags/0.9.1.tar.gz
+# cd sunwait-0.9.1/
+# sudo cp sunwait /usr/local/bin/
+
+##############################
+ set crontab to fire sunwait
+##############################
+# crontab -e
+# choose time to run which will be at least 30 minutues earlier than the earliest expected Winter sunset  UK ~ 15:15
+# /usr/local/bin/sunwait wait down 50.00000N 0.10000E; /usr/bin/python3 /home/user/hue_porch.py > /home/user/log.txt 2>&1 &
+# optional reboot system each day??
+
+
+
 ###############################
 # Gamut C corners for reference
 ###############################
