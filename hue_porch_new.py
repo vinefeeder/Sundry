@@ -15,6 +15,7 @@
 
 # wget https://github.com/risacher/sunwait/archive/refs/tags/0.9.1.tar.gz
 # cd sunwait-0.9.1/
+# make
 # sudo cp sunwait /usr/local/bin/
 
 ##############################
@@ -46,6 +47,7 @@ import json
 
 
 # Hue configuration
+# see Hue developers for finding bridge username
 username = 'Za8ro1pOtZOxz9yukG15wI82QeY4SZ2Vnz8jBoZr'
 bridge_IP_address = '192.168.1.125'
 
