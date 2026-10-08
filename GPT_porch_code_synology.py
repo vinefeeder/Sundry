@@ -1,10 +1,32 @@
-# A routine to control a group or groups of Philips Hue lamps
+# A routine to control a group or groups of Outdoor Philips Hue lamps - typically Porch loghts
 # uses Hue API version 1
 #
 # Synology version:
 # - replaces sunwait with an internal sunset calculation
 # - replaces httpx with requests
 # - otherwise preserves the working Pi control logic
+
+
+# The transition is along an imaginary circle's edge with radius and centre specified to fall
+# within the Philips Gamut C triangle on their Chromacity diagram.
+
+# See https://developers.meethue.com/develop/get-started-2/ free registration and login required
+# see https://developers.meethue.com/wp-content/uploads/2018/02/color.png for chromacity diagram
+# setting Hue to any pair of xy values for any point within the chromacity Gamut C diagram will change
+# the lamp colour to that at the xy point.
+
+# This routine uses a proximity sensor to brighten the light if persons or animals are detected in range
+
+# it is designd to be run by Synology Task Manager.
+# No non-stndard Python modules are required.
+
+###############################
+# Gamut C corners for reference
+###############################
+# Red: 0.6915, 0.3038
+# Green: 0.17, 0.7
+# Blue: 0.1532, 0.0475
+
 
 import math
 import threading
@@ -94,12 +116,12 @@ def sunset_time(day=None):
         tzinfo=timezone.utc,
     ) + timedelta(hours=utc_hour)
 
-    return sunset_utc.astimezone()
+    return sunset_utc
 
 
 def wait_for_sunset():
     sunset = sunset_time()
-    now = datetime.now()
+    now = datetime.now(timezone.utc)
 
     print(f"Today's sunset: {sunset:%Y-%m-%d %H:%M:%S %Z}")
 
@@ -108,6 +130,7 @@ def wait_for_sunset():
         return
 
     wait_seconds = (sunset - now).total_seconds()
+
     print(f"Waiting for sunset ({wait_seconds / 3600:.2f} hours).")
     time.sleep(wait_seconds)
 
