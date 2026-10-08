@@ -1,0 +1,566 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url('/cpstyles/opensans400.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url('/cpstyles/opensans800.woff2') format('woff2');
+}
+
+
+.postdetails2{ font-size : 11px; color : #000000;}
+a.postdetails2{ font-size : 11px; color : #000000; text-transform:uppercase;}
+a.postdetails2:link { font-size : 11px; color : #000000; text-transform:uppercase;}
+a.postdetails2:hover { font-size : 11px; color : #000000; text-transform:uppercase;text-decoration:underline;}
+a.postdetails2:visited{ font-size : 11px; color : #000000; text-transform:uppercase;}
+
+a.mainlinks{font-weight:bold;color: #000000; font-size:12px;text-decoration: none;}
+a.mainlinks:link {font-weight:bold;color: #000000; font-size:12px;text-decoration: none;}
+a.mainlinks:visited {font-weight:bold;color: #000000; font-size:12px;text-decoration: none;}
+a.mainlinks:hover {font-weight:bold;color: #D35100; font-size:12px;text-decoration: underline;}
+
+a.contentlink {color:#D35100;text-decoration: none;}
+a.contentlink:link {color:#D35100;text-decoration: none;}
+a.contentlink:hover{color:#D35100;text-decoration: underline;}
+
+h1{
+	padding:0px;
+	margin:0px;
+}
+
+
+
+#Menu {
+	width:106px;
+	text-align:left;
+	padding:0px;
+	border:0px;
+	margin:1px;
+	margin-top:2px;
+	margin-right:3px;
+	font-size:10px;
+	
+}
+
+#Bottomlist {
+	width:100%;
+	text-align:center;
+	padding:0px;
+	border:0px;
+	margin:0px;
+	margin-top:3px;
+	margin-bottom:2px;
+	font-size:10px;	
+}
+
+
+
+#Top {
+	width:100%;
+	text-align:left;
+	padding:0px;
+	border:0px;
+		margin:0px;
+		margin-top:0px;
+		margin-bottom:3px;
+	}
+
+#Main {
+	width:100%;
+	text-align:left;
+	padding:0px;
+	border:0px;
+	margin:0px;
+	margin-top:0px;
+	margin-bottom:3px;
+	
+
+}
+
+
+#leaderboard{ 
+	color:#FFFFFF;
+	text-align:center; 
+	margin:0px; 
+	width:100%;
+	padding:0px; 
+	margin-bottom:3px;
+	margin-top:2px;
+}
+
+
+@media screen and (max-width:768px)
+{
+	
+	#leaderboard{
+		display:none;
+	}
+	#Bottomlist{
+		display:none;
+	}
+	
+}
+
+@media screen and (max-width:1000px)
+{
+	#q
+	{
+		width:20px;
+	}
+	
+}
+
+@media screen and (max-width:1700px)
+{
+	
+	#rightbanner
+	{
+		display:none;
+	}
+	
+	.rightbanner
+	{
+		display:none;
+	}
+}
+
+
+.listfont { font-size:1.2em; }
+
+.redstar {color:red;}
+
+.whatismenulist { font-family:Asap, Verdana;text-align:right; background-color:#E3E7ED; background-image:url('/images/bg2.png');background-repeat:repeat-x; padding:3px; cursor:pointer; width:90px; font-size:11px;} 
+.whatismenulistover {font-family:Asap, Verdana; text-align:right; background-color:#FFFFFF; background-image:url('/images/bg2.png');background-repeat:repeat-x;padding:3px; cursor:pointer; width:90px; font-size:11px;} 
+.howtomenulist {font-family:Asap, Verdana; text-align:right; background-color:#E3E7E2; background-image:url('/images/bg2.png');background-repeat:repeat-x;padding:3px; cursor:pointer; width:90px; font-size:11px;} 
+.howtomenulistover {font-family:Asap, Verdana; text-align:right; background-color:#FFFFFF;background-image:url('/images/bg2.png');background-repeat:repeat-x; padding:3px; cursor:pointer; width:90px; font-size:11px;} 
+.othermenulist { font-family:Asap, Verdana;text-align:right; background-color:#DEDACE;background-image:url('/images/bg2.png');background-repeat:repeat-x; padding:3px; cursor:pointer; width:90px; font-size:11px;} 
+.othermenulistover {font-family:Asap, Verdana; text-align:right; background-color:#FFFFFF;background-image:url('/images/bg2.png');background-repeat:repeat-x; padding:3px; cursor:pointer; width:90px; font-size:11px;} 
+.listmenulist {font-family:Asap, Verdana; text-align:right; background-color:#ede9de;background-image:url('/images/bg2.png');background-repeat:repeat-x; padding:3px; cursor:pointer; width:90px; font-size:11px;} 
+.listmenulistover {font-family:Asap, Verdana; text-align:right; background-color:#FFFFFF; background-image:url('/images/bg2.png');background-repeat:repeat-x; padding:3px; cursor:pointer; width:90px; font-size:11px;} 
+.sponsormenulist { text-align:right; background-color:#FFFFFF; background-image:url('/images/bg2.png');background-repeat:repeat-x; padding:3px; cursor:pointer; width:90px; font-size:11px; line-height:12px;} 
+#whatismenu{font-family:Asap, Verdana; width:96px; color:#FFFFFF; margin-bottom:4px; font-size:11px;text-align:right;}
+#howtomenu{font-family:Asap, Verdana; width:96px; color:#FFFFFF;margin-bottom:4px;font-size:11px;text-align:right;}
+#othermenu{font-family:Asap, Verdana; width:96px; color:#FFFFFF;margin-bottom:4px;font-size:11px;text-align:right;}
+#othermenu2{font-family:Asap, Verdana; width:96px; color:#FFFFFF;margin-bottom:4px;font-size:11px;text-align:right;}
+#sponsormenu{font-family:Asap, Verdana; width:96px; color:#FFFFFF;margin-bottom:4px;font-size:11px;text-align:right; }
+
+.popguideslist{width:230px;border-bottom:0px solid #FFFFFF; padding:3px; cursor:pointer; font-size:12px;color:#000000;}
+
+.popguides{ width:240px; color:#FFFFFF; margin:3px; font-size:12px;text-align:left;float:left;}
+
+/* The content of the posts (body of text) */
+.postbody { font-size : 11.5px; 
+	line-height: 1.5em;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	}
+
+
+
+.TopHeader { 	font-family:Verdana;font-size:24px; font-weight:bold; text-align:left;color:#3c79ae;}
+
+.sinput { border:1px solid #796A60; background:#EEEEEE; } 
+
+a.stylemenu {color: #000000; text-decoration: none;font-weight:normal;}
+a.stylemenu:link {color: #000000; text-decoration: none;font-weight:normal;}
+a.stylemenu:visited {color: #000000; text-decoration: none;font-weight:normal;}
+a.stylemenu:hover {color: #000000; text-decoration: underline;font-weight:normal;}
+
+.tableheader{ color:#FFFFFF; font-size:12px; padding:2px;} 
+
+.minus2pixels { background:#333; padding:3px; border-bottom:3px solid #3c79ae; }
+
+.row1banner { background-color:#EAECEC; }
+
+.row1 { padding:5px;background-color:#F2F2F2; border-bottom:1px solid #fff;border-radius:1px;/*background-image:url('/images/bg2.png');background-repeat:repeat-x;*/}
+.row1searchbox {background-color:#EAECEC;}
+
+
+.row2 { background-color:#D8DADA; background-image:url('/images/bg2.png');background-repeat:repeat-x; }
+.row3 { background-color:#FFFFAA; }
+.row4 { background-color:#CCFFCC; }
+
+.row1green { background-color:#E9EBED; }
+.row2green { background-color:#e0e0e0; }
+.row3green { background-color:#FFFFAA; }
+.row4green { background-color:#CCFFCC; }
+
+.row1blue { background-color:#E9EBED; }
+.row2blue { background-color:#e0e0e0; }
+.row3blue { background-color:#FFFFAA; }
+.row4blue { background-color:#CCFFCC; }
+
+.newversion {border-bottom:#AAAAAA 1px solid;padding:1px;}
+.newcomments {border-bottom:#AAAAAA 1px solid;padding:1px}
+.newtool {border-bottom:#AAAAAA 1px solid;padding:1px}
+
+
+.spiffyrow1fg{
+  background:#efefef;
+  border-radius:0px;}
+
+
+.spiffyredfg{
+text-align:left;
+vertical-align:left;
+  
+  }
+  
+  .spiffygray{
+  background:#333;
+  border-radius:0px;
+  }
+
+.spiffyorangefg{
+  background:#660000;
+  border-radius:0px;
+  }        
+
+
+.spiffygreenfg{
+  background:#214239;
+  border-radius:0px;
+  }
+
+
+.spiffybluefg{
+  background:#1A2855;
+  border-radius:0px;}
+
+
+.spiffywhite5pxfg{
+  background:#FFFFFF;
+  border-radius:0px;}
+
+.spiffywhite5pxfgsponsor{
+  background:#FFFFFF;  
+  background-image:url('/images/sponsorleaderboard.gif');
+	background-repeat:no-repeat;
+	border-radius:0px;
+} 
+ 
+
+.spiffygray5pxfg{
+  background:#E6E4E5;
+  border-radius:0px;}
+
+.spiffygray5pxfgsponsor{
+  background:#E6E4E5;  
+  background-image:url('/images/sponsorleaderboardgray.gif');
+	background-repeat:no-repeat;
+	border-radius:0px;
+}
+ 
+
+.spiffywhite5pxfg{
+  background:#FFFFFF;
+  border-radius:0px;}
+
+.spiffywhite5pxfgsponsor{
+  background:#FFFFFF;  
+  background-image:url('/images/sponsorleaderboard.gif');
+	background-repeat:no-repeat;
+	border-radius:0px;
+}
+  
+
+.spiffyleaderboardfg{
+  background:#777777;
+  border-radius:0px;}  
+  
+
+  
+ .maingray {
+ background-color:#FFFFFF;
+ border-radius:0px;
+ padding:20px;
+ }
+ 
+  .mainergray {
+ background-color:#FFFFFF;
+ border-radius:0px;
+ padding:20px;
+ }
+ 
+	
+ /* Written by Kyle Hamilton of candpgeneration.com
+       CSS3 transitions - animated dropdown menu without javascript that plays nice in IE7+, FF, CHROME, SAFARI
+       The original bare bones version can be found at: http://candpgeneration.com/CSS-dropdowns/CSS3-dropdown.html
+       You are free to use this code any way you like. 
+       Please do not remove this comment. */
+
+    /* the main menu */
+    .navigation {
+        display:block;
+        max-width:1250px;
+		    z-index:1000;
+        margin-left: 0;
+				margin-right: auto;
+
+    }
+    .navigation > ul{
+        display: -webkit-box;
+        -webkit-box-orient: horizontal;
+
+        display: -moz-box;
+        -moz-box-orient: horizontal;
+
+        display: box;
+        -moz-box-orient: horizontal;
+    }
+    .navigation ul{
+        list-style :none;
+        margin:0; 
+        padding:0; /* gets rid of any inherited margins and padding */
+       font-family:  'Open Sans', sans-serif,  Verdana,Helvetica,Arial,sans-serif;
+        font-weight: 800; 
+        position:relative;
+        z-index:1000;
+        width:100%;
+			
+        
+    }
+    .navigation > ul > li { 
+        position : relative;
+        float : left;
+  
+        font-size: 14px; /* this is here and not above, so that the subs can be made smaller using a % if desired */
+
+        -webkit-box-flex: 1;
+        -moz-box-flex: 1;
+        box-flex: 1;
+    }
+
+    .navigation > ul > li + li{
+        margin-left:1px;
+       
+    }
+    .navigation > ul > li > a {
+    /*	  background-color: #333; /*  grey */
+        display:block;
+       
+        padding:0px 10px;
+        padding-top:3px;
+        padding-bottom:7px;
+       margin-top:40px;
+        text-decoration:none;
+        color:#eee; 
+        border-radius:1px;
+        white-space:nowrap;
+       
+			  /* make the background-color fade in on roll-over */
+        -webkit-transition: background-color 0.3s ease;
+        -moz-transition: background-color 0.3s ease;
+        -o-transition: background-color 0.3s ease;
+        -ms-transition: background-color 0.3s ease;
+        transition: background-color 0.3s ease;
+
+
+    }
+    
+    
+    .navigation > ul > li > a:hover{
+        /*background-color:#999; /* grey */
+    
+        color:#3c79ae; /* light grey */
+    }
+    
+    
+		
+    
+
+
+    /* the show/hide effects */
+    /* the drop-down box */
+
+    .navigation ul ul{
+
+        width:360px; /* you need a width to accomodate tertiary menus */
+
+        position:absolute;
+        z-index:100;
+
+        height: 0;
+        overflow: hidden;
+        -webkit-transition: height 0.3s ease-in;
+        -moz-transition: height 0.3s ease-in;
+        -o-transition: height 0.3s ease-in;
+        -ms-transition: height 0.3s ease-in;
+        transition: height 0.3s ease-in;
+    }
+
+
+    /* don't display tertiary box yet */
+    .navigation > ul > li:hover ul ul, .navigation > ul > li > a:hover ul ul{
+        height:0;
+
+    }
+    /* tertiary drop-down box */
+    .navigation ul ul ul{
+        left:190px;
+        width:190px;
+        
+    }
+
+    .navigation > ul > li:hover ul, .navigation > ul > li > a:hover ul,
+    .navigation ul ul li:hover > ul, .navigation ul ul li a:hover > ul{
+        height:240px;
+
+    }
+
+    /* drop-down item styles */
+    .navigation ul ul li{
+        background-color:#eee; /* grey */
+        width:190px;
+        
+
+        /* make the background-color fade in on roll-over */
+        -webkit-transition: background-color 0.3s ease;
+        -moz-transition: background-color 0.3s ease;
+        -o-transition: background-color 0.3s ease;
+        -ms-transition: background-color 0.3s ease;
+        transition: background-color 0.3s ease;
+
+    }
+    /* unfortunate ie7 gap fix */
+    .ie7 .navigation ul ul li{
+        margin-bottom:-3px;
+    }
+    .navigation ul ul li:hover {
+        background-color:#999;
+    }
+
+
+
+
+    .navigation ul ul li a {
+        display:block;
+        text-decoration:none;
+        margin:0 12px;
+        padding:5px 0;
+        color:#4c4c4c; /* grey */
+
+    }
+
+    /* The following six rules set the lines in between menu items.
+       To make this play nice in IE, we will not be using nth-child
+       but the "+" sibling slector.
+    */
+    .navigation ul ul ul li a{
+        border:none !important;
+    }
+    .navigation ul ul ul li + li a{
+        border-top:1px dotted #999 !important;
+    }
+    .navigation ul ul li + li a{
+        border-top:1px dotted #999;
+    }
+    .navigation ul ul li:hover + li a{
+        border-top:1px solid #eaeaea;
+    }
+    .navigation ul ul ul li:hover + li a{
+        border: 0 !important;
+    }
+    .navigation ul ul ul li:hover + li{
+        border-top:1px solid #999 !important;
+    }
+
+
+    .navigation ul ul li a:hover, .navigation ul ul li:hover > a {
+        color:#ffffff; /* white */
+
+    }
+
+   
+    /* *************************************************************** */
+
+     .header{
+     	width:100%;
+     	min-width:800px;
+     	   height:68px;
+     	   padding-top:0px;
+     	   margin-bottom:0px;
+          border-bottom:7px solid #3c79ae;
+           /*christmas url('/images/grayholidaysanta.png') no-repeat;
+           new year grayholidaynewyear.png
+           turn on snow below also
+                     background:#222 url('/images/gray.png') no-repeat;
+
+          */
+          background:#222 url('/images/gray.png') no-repeat;
+         }
+         
+       /*  
+         #snow{
+	background: none;
+	font-family: Androgyne;
+	background-image: url('/images/snow2.png'), url('/images/snow3.png');
+	height: 66px;
+	left: 0;
+	right: 0;
+	position: absolute;
+	top: 0;
+	
+	max-width: 1250px;
+	margin-left: auto; 
+  margin-right: auto; 
+  z-index:1;
+	-webkit-animation: snow 30s linear infinite;
+	-moz-animation: snow 30s linear infinite;
+	-ms-animation: snow 30s linear infinite;
+	animation: snow 30s linear infinite;
+}
+@keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+@-moz-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 400px 1000px, 200px 400px, 100px 300px;}
+}
+@-webkit-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+@-ms-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}	
+     
+     
+*/
+ 
+[tip] .tooltip {
+  position: fixed;
+  font-size: 12px;
+  line-height: 20px;
+  padding: 5px;
+  background: #FFFFE1;
+  border: 1px solid #222;
+  visibility: hidden;
+  opacity: 0;
+  box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s, visibility 0s;
+  color: black;
+  min-width: 120px;
+  max-width: 420px;
+  font-weight:normal;
+  z-index: 1000;
+}
+
+[tip]:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
