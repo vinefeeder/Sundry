@@ -180,7 +180,7 @@ bri = NORMAL_BRIGHTNESS
 '''def is_time_to_stop():
     midnight = datetime.combine(date.today(), datetime.min.time()) + timedelta(days=1)
     stop_time = midnight - timedelta(hours=HOURSBEFOREMIDNIGHT)
-    return datetime.now().astimezone() >= stop_time'''
+    return datetime.now() >= stop_time'''
 
 # on machines that do not change automatically to BST, the following three definitions
 # fist detect BST, then calculate the stop time in UTC, and finally compare the current UTC time to the stop time.
